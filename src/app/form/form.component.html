@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm" class="align-items-start d-flex flex-column">
+    <label for="email">Email</label>
+    <input type="email" name="email" email required #email="ngModel" ngModel>
+    <p class="color-red" *ngIf="!email.valid && email.touched">Email is invalid</p>
+    <label for="subscription">Subscription</label>
+    <select name="subscription" [ngModel]="'Advanced'" #subscription="ngModel" ngModel>
+        <option value="Basic">Basic</option>
+        <option value="Advanced">Advanced</option>
+        <option value="Pro">Pro</option>
+    </select>
+    <p class="color-red" *ngIf="!subscription.valid && subscription.touched">Subscription is invalid</p>
+    <label for="password">Password</label>
+    <input type="password" required name="password" ngModel #password="ngModel">
+    <p class="color-red" *ngIf="!email.valid && email.touched">Password is invalid</p>
+    <p class="color-red" *ngIf="!form.valid && form.touched">Invalid form</p>
+    <button [disabled]="!form.valid">Submit</button>
+</form>

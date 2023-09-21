@@ -1,0 +1,15 @@
+.color-red {
+    color: red;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-items-start {
+    align-items: start;
+}
